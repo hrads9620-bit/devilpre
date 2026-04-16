@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Live Cricket Fantasy Updates</title>
+
+<style>
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#050f1c;
+  color:#fff;
+  overflow-x:hidden;
+}
+
+/* animated background */
+.bg{
+  position:fixed;
+  top:0;left:0;
+  width:100%;
+  height:100%;
+  background: radial-gradient(circle at top,#0b2a4a,#050f1c);
+  animation: pulseBg 6s infinite alternate;
+  z-index:-1;
+}
+
+@keyframes pulseBg{
+  0%{filter:brightness(1)}
+  100%{filter:brightness(1.2)}
+}
+
+/* container */
+.container{
+  max-width:650px;
+  margin:auto;
+  padding:18px;
+}
+
+/* top live strip */
+.live-strip{
+  text-align:center;
+  font-size:12px;
+  padding:10px;
+  color:#00e5ff;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:15px;
+}
+
+.hero h1{
+  font-size:26px;
+  margin-bottom:10px;
+}
+
+.hero p{
+  color:#cfd8dc;
+  font-size:14px;
+  line-height:1.5;
+}
+
+/* urgency badge */
+.badge{
+  display:inline-block;
+  background:#ff1744;
+  padding:8px 12px;
+  border-radius:20px;
+  font-weight:bold;
+  animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.05)}
+  100%{transform:scale(1)}
+}
+
+/* CTA */
+.btn{
+  display:block;
+  margin:15px auto;
+  padding:15px;
+  width:92%;
+  max-width:340px;
+  background:linear-gradient(90deg,#00c853,#00e676);
+  color:black;
+  font-size:18px;
+  font-weight:bold;
+  border-radius:14px;
+  text-align:center;
+  text-decoration:none;
+  box-shadow:0 10px 25px rgba(0,0,0,0.4);
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:scale(1.04);
+}
+
+/* cards */
+.card{
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.08);
+  padding:15px;
+  border-radius:14px;
+  margin-top:15px;
+}
+
+/* list */
+ul{
+  padding-left:18px;
+}
+
+ul li{
+  margin:8px 0;
+  color:#dce3e6;
+}
+
+/* video */
+video{
+  width:100%;
+  border-radius:12px;
+  margin-top:10px;
+}
+
+/* sticky CTA */
+.sticky{
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  background:#00e676;
+  color:black;
+  text-align:center;
+  padding:14px;
+  font-weight:bold;
+  z-index:999;
+  animation: stickyPulse 2s infinite;
+}
+
+@keyframes stickyPulse{
+  0%{opacity:1}
+  50%{opacity:0.85}
+  100%{opacity:1}
+}
+
+/* popup */
+.popup{
+  position:fixed;
+  bottom:80px;
+  right:15px;
+  background:#00e676;
+  color:black;
+  padding:12px;
+  border-radius:10px;
+  font-weight:bold;
+  display:none;
+  z-index:999;
+  box-shadow:0 10px 20px rgba(0,0,0,0.4);
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<div class="live-strip">
+⚡ LIVE CRICKET INSIGHTS ACTIVE • UPDATED BEFORE EVERY MATCH
+</div>
+
+<div class="container">
+
+  <div class="hero">
+    <div class="badge">🔥 TODAY MATCH ALERT</div>
+
+    <h1>Get Winning Fantasy XI Before Toss</h1>
+
+    <p>
+      Join free Telegram for <b>Playing XI, pitch report, match analysis & fantasy guidance</b> before every match.
+    </p>
+  </div>
+
+  <a class="btn" href="https://t.me/+S8D-ZMA5Bh5lMzg1">
+    🚀 JOIN FREE TELEGRAM NOW
+  </a>
+
+  <div class="card">
+    <h3>🎯 What You Get Daily</h3>
+    <ul>
+      <li>🏏 Playing XI before toss</li>
+      <li>📊 Pitch report & match insights</li>
+      <li>🔥 Fantasy team suggestions</li>
+      <li>⚡ Toss-based final updates</li>
+      <li>📱 Live match alerts</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>🎥 Live Preview</h3>
+    <video controls>
+      <source src="video.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="card">
+    <h3>📈 Why People Join Us</h3>
+    <ul>
+      <li>✔ Fastest cricket updates</li>
+      <li>✔ Simple & clean insights</li>
+      <li>✔ No spam content</li>
+      <li>✔ Only match-focused updates</li>
+    </ul>
+  </div>
+
+  <a class="btn" href="https://t.me/+S8D-ZMA5Bh5lMzg1">
+    ⚡ GET TODAY’S MATCH UPDATES
+  </a>
+
+</div>
+
+<div class="popup" id="popup">
+🔥 18 people joined just now
+</div>
+
+<div class="sticky">
+👉 TAP HERE TO JOIN TELEGRAM FREE
+</div>
+
+<script>
+/* popup logic */
+setTimeout(()=>{
+  document.getElementById("popup").style.display="block";
+},3000);
+
+setTimeout(()=>{
+  document.getElementById("popup").style.display="none";
+},9000);
+</script>
+
+</body>
+</html>
